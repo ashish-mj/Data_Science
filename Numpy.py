@@ -108,12 +108,37 @@ print(b[b%2!=0])
 a=np.arange(1,9,dtype=float)
 print(a+a)
 a=np.arange(1,4,dtype=float)
+
 print(a)
-b=np.array([[0,0,0],[10,20,30],[40,50,60]],dtype=float)
+a=np.array([1,2,1,1])
+a=np.reshape(a,(4,1))
+print(a)
+b=np.array([[0,0,0],[10,20,30],[40,50,60],[70,80,90]],dtype=float)
 print(b)
 print("Addition====================")
 print(a+b)
 
+#################################################################Iterating
+
+b=np.array([[0,0,0],[10,20,30],[40,50,60],[70,80,90]],dtype=float)
+
+for i in (b):
+    for j in i:
+        print(j)
+
+
+for i in np.nditer(b):
+    print(i)
+    
+a=b.T
+print(a)
+
+for i in np.nditer(a):
+    print(i)
+    
+print("Traditional loop")
+for i in (a):
+    for j in i:
+        print(j)
+
 #################################################################
-
-
