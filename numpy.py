@@ -71,4 +71,26 @@ print(a)
 dt=np.dtype([("Age",int),("Salary",float)])
 a=np.ones((3,3),dtype=dt)
 print(a)
+#############################################################Slicing and Indexing
+
+a = np.arange(0,20,2,dtype=float)
+print(a)
+print(sum(a))
+s=slice(1,5,3)
+print(a[s])
+print(a[:len(a):2])
+print(a[1:6:2])
+
+b=[[1,2,3],[4,5,6],[7,8,9]]
+b=np.asarray(b)
+print(b[1,2])
+print(b[0])
+print(b[1,2])
+
+print("\n------------------------------------------------------------\n")
+print(b[::-1])
+print(b[...,1])
+print(b[...,2])
+print(b[...,1:])
+
 #############################################################
