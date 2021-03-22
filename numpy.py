@@ -57,4 +57,18 @@ print(b.flags)
 a=np.arange(1,100,7)
 print(a)
     
-##########################################################
+##########################################################Array creations
+
+a=np.empty((3,3),dtype=complex)
+print(a)
+
+a=np.zeros((3,3),dtype=int)
+print(a)
+
+a=np.ones((3,3),dtype=float)
+print(a)
+
+dt=np.dtype([("Age",int),("Salary",float)])
+a=np.ones((3,3),dtype=dt)
+print(a)
+#############################################################
