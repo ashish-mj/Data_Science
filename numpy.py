@@ -41,6 +41,20 @@ for i in a:
     print("Name - "+str(i[0])+"\nAge - "+str(i[1])+"\nSalary - "+str(i[2]))
     print("-------------------------------------------------\n")
 
+##########################################################Array attributes
+    
+a = np.array([[1,2,3],[4,5,6]],dtype=float)
+print(a)
+print(a.shape)
+a.shape=(3,2)
+print(a)
+b=a.reshape(2,3)
+print(b)
+print(b.ndim)
+print(b.itemsize)
+print(b.flags)
+
+a=np.arange(1,100,7)
+print(a)
+    
 ##########################################################
-    
-    
