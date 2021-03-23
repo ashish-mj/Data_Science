@@ -141,4 +141,27 @@ for i in (a):
     for j in i:
         print(j)
 
-#################################################################
+#################################################################Array Manipulation
+        
+b=np.array([[0,0,0],[10,20,30],[40,50,60],[70,80,90]],dtype=float)
+print("--------------------------------------------")
+print(b.flat)
+for i in b.flat[4:]:
+   print(i)        
+   
+print("--------------------------------------------")
+print(b.flatten())
+for i in b.flatten():
+    print(i)
+    
+a=np.array([[1,2],[3,4]])
+b=np.array([[5,6],[7,8]])
+print(np.concatenate((a,b),axis=1))
+
+a=np.arange(10).reshape((2,5))
+print(np.split(a,2))
+
+print(np.split(a,5))
+
+        
+        
