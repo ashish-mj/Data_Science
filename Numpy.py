@@ -176,6 +176,19 @@ print(np.average(b))
 print(np.var(b))
 print(np.std(b))
 
+##############################################################Linear Algebra
+
+a = np.array([[1,2],[3,4]]) 
+b = np.array([[11,12],[13,14]]) 
+
+print("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+print(np.dot(a,b))
+print(np.linalg.det(a))
+print(np.linalg.det(b))
+print(np.linalg.inv(a))
+print(np.linalg.inv(b))
+
 
         
         
