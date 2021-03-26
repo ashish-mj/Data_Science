@@ -143,11 +143,23 @@ print(data1.values)
 print(data1.T)
 
 
+############################################Statistics Functions
+
+data = pd.Series([1,2,3,4,5,6,7,8,9])
+data1 = [[1,"Ashish","MI",5],[2,"Dhoni","CSK",3],[3,"Virat","RCB",0],[4,"Warner","SRH",2],[5,"Rahul","KP",0],[6,"Dinesh","KKR",2],[7,"Iyer","DC",0],[8,"Samson","RR",1]]
+data1 = pd.DataFrame(data1,columns=["ID","Player_Name","Team","Titles"])
+print(data)
+print(data1)
+
+print(data.sum())
+print(data1.sum(axis=1))
+
+print(data.mean())
+print(data1.mean())
+
+print(data.describe())
+print(data1.describe(include=["number"]))
+print(data1.describe(include=["object"]))
+print(data1.describe(include="all"))
 
 ############################################
-
-
-
-
-
-
