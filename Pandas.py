@@ -114,13 +114,37 @@ print(data)
 
 data=data.drop([1,4])
 
+############################################Basic Functionality
+
+data = pd.Series([1,2,3,4,5,6,7,8,9])
+data1 = [[1,"Ashish","MI"],[2,"Dhoni","CSK"],[3,"Virat","RCB"],[4,"Warner","SRH"],[5,"Rahul","KP"],[6,"Dinesh","KKR"],[7,"Iyer","DC"],[8,"Samson","RR"]]
+data1 = pd.DataFrame(data1,columns=["ID","Player_Name","Team"])
+print(data)
+print(data1)
+
+print(data.axes)
+print(data1.axes)
+
+print(data.dtype)
+print(data1.dtypes)     #dtypes for dataframes
+
+print(data.empty)
+print(data1.empty)
+
+print(data.head(4))
+print(data1.head(4))
+
+print(data.tail(7))
+print(data1.tail(7))
+
+print(data.values)
+print(data1.values)
+
+print(data1.T)
+
+
+
 ############################################
-
-
-
-
-
-
 
 
 
