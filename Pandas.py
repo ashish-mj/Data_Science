@@ -63,4 +63,67 @@ print(t1)
 t1=t1.drop(t1.index[0:3])
 print(t1)
 
+df = pd.DataFrame([[1, 2], [3, 4]], columns = ['a','b'])
+df2 = pd.DataFrame([[5, 6], [7, 8]], columns = ['a','b'])
+
+df = df.append(df2,ignore_index=True)
+print(df)
+df = df.drop(0)
+print(df)
+
+############################################Practice Dataframes
+
+data = [[1,"Ashish","MI"],[2,"Dhoni","CSK"],[3,"Virat","RCB"],[4,"Warner","SRH"],[5,"Rahul","KP"],[6,"Dinesh","KKR"],[7,"Iyer","DC"],[8,"Samson","RR"]]
+data = pd.DataFrame(data,columns=["ID","Player_Name","Team"])
+print(data)
+
+data["Salary"]="$2000"
+print(data)
+titles ={"MI":5,"CSK":3,"KKR":2,"SRH":2,"RR":1,"RCB":0,"DC":0,"KP":0}
+data["Titles"]=data["Team"].map(titles)
+print(data)
+
+net_worth=[]
+
+for i in data["Titles"]:
+    if i==5:
+        net_worth.append("$1200000")
+    elif i==3:
+        net_worth.append("$900000")
+    elif i==2:
+        net_worth.append("$500000")
+    else:
+        net_worth.append("$350000")
+
+data["Net_worth"]=net_worth
+print(data)
+
+data.loc[data["Titles"]>=3,"Salary"]="$4000"
+print(data)
+
+del data["ID"]
+print(data)
+
+print(data[:4])
+print(data.loc[data["Player_Name"]!=""])
+temp = pd.Series(["Smith","RPSG","$2000",0,"$35000"],data.columns)
+data=data.append(temp,ignore_index=True)
+print(data)
+data=data.drop(8)
+print(data)
+
+data=data.drop([1,4])
+
+############################################
+
+
+
+
+
+
+
+
+
+
+
 
