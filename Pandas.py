@@ -162,4 +162,17 @@ print(data1.describe(include=["number"]))
 print(data1.describe(include=["object"]))
 print(data1.describe(include="all"))
 
-############################################
+############################################Additional operations
+
+data = pd.Series([1,2,3,4,5,6,7,8,9])
+data1 = [[1,"Ashish","MI",5],[2,"Dhoni","CSK",3],[3,"Virat","RCB",0],[4,"Warner","SRH",2],[5,"Rahul","KP",0],[6,"Dinesh","KKR",2],[7,"Iyer","DC",0],[8,"Samson","RR",1]]
+data1 = pd.DataFrame(data1,columns=["ID","Player_Name","Team","Titles"])
+
+for i in data1.values:
+    print("_______________")
+    print(i[1])
+    
+for key,value in data1.iteritems():
+    print(str(key)+" "+str(value))
+    
+print(data1.sort_values(by="Titles"))
